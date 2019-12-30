@@ -1,0 +1,127 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<http://limbo-project.org/type/> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix wot: 		<http://xmlns.com/wot/0.1/> .
+@prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@base 			<http://limbo-project.org/type/> .
+
+<http://limbo-project.org/type/> rdf:type owl:Ontology ;
+                                 dc:title "EEGFacilities"@en;
+                                 dc:description "New ontology description"@en; 
+                                 owl:versionInfo "0.0.1"@en;
+                                 dc:creator "Dennis Kubitza" . 
+#################################################################
+
+###  Property Definitions (Number of Property) 13 ###
+#  --------------------------- Property 0------------------------- 
+<https://schema.org/geoWithin> rdf:type owl:ObjectProperty ;
+                               rdfs:label "within"@en; 
+                               rdfs:label "in"@de; 
+                               rdfs:domain <https://schema.org/Place>;
+                               rdfs:range <https://schema.org/Place> . 
+#  --------------------------- Property 1------------------------- 
+:energyBasis rdf:type owl:DatatypeProperty ;
+             rdfs:label "Energysource"@en; 
+             rdfs:label "Energyquelle"@de; 
+             rdfs:domain :EEGSite;
+             rdfs:range xsd:string . 
+#  --------------------------- Property 2------------------------- 
+<https://www.w3.org/2007/uwa/context/location.owl#northing> rdf:type owl:DatatypeProperty ;
+                                                            rdfs:label "northing"@en;
+                                                            rdfs:label "Nordung"@de;  
+                                                            rdfs:domain <https://www.w3.org/2007/uwa/context/location.owl#UTM_Coordinates>;
+                                                            rdfs:range xsd:double . 
+#  --------------------------- Property 3------------------------- 
+<https://www.w3.org/2007/uwa/context/location.owl#easting> rdf:type owl:DatatypeProperty ;
+                                                           rdfs:label "easting"@en;
+                                                           rdfs:label "Ostung"@de;  
+                                                           rdfs:domain <https://www.w3.org/2007/uwa/context/location.owl#UTM_Coordinates>;
+                                                           rdfs:range xsd:double . 
+#  --------------------------- Property 4------------------------- 
+:hasUTMCoordinates rdf:type owl:ObjectProperty ;
+                   rdfs:label "UTM Coordinates"@en; 
+                   rdfs:label "UTM Koordinaten"@de; 
+                   rdfs:domain <https://schema.org/Place>;
+                   rdfs:range <https://www.w3.org/2007/uwa/context/location.owl#UTM_Coordinates> . 
+#  --------------------------- Property 5------------------------- 
+<https://schema.org/name> rdf:type owl:DatatypeProperty ;
+                          rdfs:label "name"@en; 
+                          rdfs:label "Name"@de; 
+                          rdfs:domain <https://schema.org/Place>;
+                          rdfs:range xsd:string . 
+#  --------------------------- Property 6------------------------- 
+:eegIdentifier rdf:type owl:DatatypeProperty ;
+               rdfs:label "EEG Identifier"@en; 
+               rdfs:label "EEG Identifikation"@de; 
+               rdfs:domain :EEGSite;
+               rdfs:range xsd:string . 
+#  --------------------------- Property 7------------------------- 
+<https://schema.org/branchCode> rdf:type owl:DatatypeProperty ;
+                                rdfs:label "branchCode"@en; 
+                                rdfs:label "Herrsteller Code"@de; 
+                                rdfs:domain <https://schema.org/Place>;
+                                rdfs:range xsd:string . 
+#  --------------------------- Property 8------------------------- 
+:rotorPerimeter rdf:type owl:DatatypeProperty ;
+                rdfs:label "Rotor Diameter"@en; 
+                rdfs:label "Rotor Durchmesser"@de; 
+                rdfs:domain :EEGSite;
+                rdfs:range xsd:double . 
+#  --------------------------- Property 9------------------------- 
+:hubHeight rdf:type owl:DatatypeProperty ;
+           rdfs:label "Height"@en; 
+           rdfs:label "Höhe"@de; 
+           rdfs:domain :EEGSite;
+           rdfs:range xsd:double . 
+#  --------------------------- Property 10------------------------- 
+:comissioning rdf:type owl:DatatypeProperty ;
+              rdfs:label "commisioning"@en; 
+              rdfs:label "Datum"@en; 
+              rdfs:domain :EEGSite;
+              rdfs:range xsd:dateTime . 
+#  --------------------------- Property 11------------------------- 
+<https://www.w3.org/2007/uwa/context/location.owl#latitudeZone> rdf:type owl:DatatypeProperty ;
+                                                                rdfs:label "latitudeZone"@en; 
+                                                                rdfs:label "Breitengrad Zone"@de; 
+                                                                rdfs:domain <https://www.w3.org/2007/uwa/context/location.owl#UTM_Coordinates>;
+                                                                rdfs:range xsd:integer . 
+#  --------------------------- Property 12------------------------- 
+<https://www.w3.org/2007/uwa/context/location.owl#longitudeZone> rdf:type owl:DatatypeProperty ;
+                                                                 rdfs:label "longitudeZone"@en; 
+                                                                 rdfs:label "Längengrad Zone"@de; 
+                                                                 rdfs:domain <https://www.w3.org/2007/uwa/context/location.owl#UTM_Coordinates>;
+                                                                 rdfs:range xsd:integer . 
+###  Class Definitions (Number of Classes) 5 ###
+#  --------------------------- Class  0------------------------- 
+:EEGSite rdf:type owl:Class; 
+         rdfs:subClassOf <https://schema.org/Place> ;
+         rdfs:label "EEGSite"@en ; 
+         rdfs:label "EEG Standort"@de . 
+#  --------------------------- Class  1------------------------- 
+<https://schema.org/State> rdf:type owl:Class; 
+                           rdfs:subClassOf <https://schema.org/Place> ;
+                           rdfs:label "State"@en ; 
+                           rdfs:label "Bundesland"@de . 
+#  --------------------------- Class  2------------------------- 
+<https://schema.org/Place> rdf:type owl:Class; 
+                           rdfs:label "Place"@en ;
+                           rdfs:label "Ort"@de . 
+#  --------------------------- Class  3------------------------- 
+<https://www.w3.org/2007/uwa/context/location.owl#UTM_Coordinates> rdf:type owl:Class; 
+                                                                   rdfs:label "UTMCoordinates"@en ;
+                                                                   rdfs:label "UTM Koordinaten"@de .  
+#  --------------------------- Class  4------------------------- 
+<https://schema.org/City> rdf:type owl:Class; 
+                          rdfs:subClassOf <https://schema.org/Place> ;
+                          rdfs:label "City"@en ; 
+                          rdfs:label "Stadt"@de . 
+
