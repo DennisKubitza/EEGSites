@@ -1,0 +1,543 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<http://portal.limbo-project.org/vocab/AppPlant/> .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: 		<http://www.w3.org/2002/07/owl#> .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/> .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace> .
+@prefix wot: 		<http://xmlns.com/wot/0.1/> .
+@prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
+@prefix : 		<http://portal.limbo-project.org/vocab/AppPlant/> .
+@base 			<http://portal.limbo-project.org/vocab/AppPlant/> .
+
+<http://portal.limbo-project.org/vocab/AppPlant/> rdf:type owl:Ontology ;
+                                                  dc:title "AppPlantNavigation"@en; 
+                                                  dc:description "Modelling Navigation Information for handicapped people within public buildings and for public transport"@en . 
+#################################################################
+
+###  Property Definitions (Number of Property) 53 ###
+#  --------------------------- Property 0------------------------- 
+:WaggonPosition rdf:type owl:DatatypeProperty ;
+                rdfs:label "WaggonPosition"@IRI-based; 
+                rdfs:label "Position"@en; 
+                rdfs:label "Position"@de; 
+                rdfs:domain :Waggon;
+                rdfs:range rdfs:Literal . 
+#  --------------------------- Property 1------------------------- 
+<https://schema.org/containsPlace> rdf:type owl:ObjectProperty ;
+                                   rdfs:label "containsPlace"@IRI-based; 
+                                   rdfs:label "contains"@en; 
+                                   rdfs:label "enthält"@de; 
+                                   rdfs:domain <http://schema.org/Place>;
+                                   rdfs:range <http://schema.org/Place> . 
+#  --------------------------- Property 2------------------------- 
+:hasName rdf:type owl:DatatypeProperty ;
+         rdfs:label "hasName"@IRI-based; 
+         rdfs:label "Name"@en; 
+         rdfs:label "Name"@de; 
+         rdfs:domain :StoppingArea;
+         rdfs:range xsd:string . 
+#  --------------------------- Property 3------------------------- 
+<https://schema.org/geoTouches> rdf:type owl:ObjectProperty ;
+                                rdfs:label "geoTouches"@IRI-based; 
+                                rdfs:label "geoTouches"@en; 
+                                rdfs:domain <http://schema.org/Place>;
+                                rdfs:range <http://schema.org/Place> . 
+#  --------------------------- Property 4------------------------- 
+:isStoppingAt rdf:type owl:ObjectProperty ;
+              rdfs:label "isStoppingAt"@IRI-based; 
+              rdfs:label "Stopping At"@en; 
+              rdfs:label "hält bei"@de; 
+              rdfs:domain :PlannedStop;
+              rdfs:range :StoppingArea . 
+#  --------------------------- Property 5------------------------- 
+:hasVehicle rdf:type owl:ObjectProperty ;
+            rdfs:label "hasVehicle"@IRI-based; 
+            rdfs:label "Vehicle"@en; 
+            rdfs:label "Fahrzeug"@de; 
+            rdfs:domain :Lines;
+            rdfs:range :Vehicle . 
+#  --------------------------- Property 6------------------------- 
+:belongsTo rdf:type owl:ObjectProperty ;
+           rdfs:label "belongsTo"@IRI-based; 
+           rdfs:label "belongsTo"@en; 
+           rdfs:label "gehört zu"@de; 
+           rdfs:domain :Waggon;
+           rdfs:range :Vehicle . 
+#  --------------------------- Property 7------------------------- 
+:hasEnd rdf:type owl:ObjectProperty ;
+        rdfs:label "hasEnd"@IRI-based; 
+        rdfs:label "end"@en; 
+        rdfs:label "Ende"@de; 
+        rdfs:domain :Stairs;
+        rdfs:range :WalkingArea . 
+#  --------------------------- Property 8------------------------- 
+:From rdf:type owl:ObjectProperty ;
+      rdfs:label "From"@IRI-based; 
+      rdfs:label "plannted Start"@en; 
+      rdfs:label "geplant ab"@de; 
+      rdfs:domain :ConstructionSite;
+      rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 9------------------------- 
+:isInformationCenter rdf:type owl:DatatypeProperty ;
+                     rdfs:label "isInformationCenter"@IRI-based; 
+                     rdfs:label "Information Center"@en; 
+                     rdfs:label "Informationszentrum"@de; 
+                     rdfs:domain :DBInformationPoint;
+                     rdfs:range xsd:boolean . 
+#  --------------------------- Property 10------------------------- 
+:impliesAlternativeUseOf rdf:type owl:ObjectProperty ;
+                         rdfs:label "impliesAlternativeUseOf"@IRI-based; 
+                         rdfs:label "Alternative"@en; 
+                         rdfs:label "Alternative"@de; 
+                         rdfs:domain :TemporaryChanges . 
+#  --------------------------- Property 11------------------------- 
+:hasVehicleStop rdf:type owl:ObjectProperty ;
+                rdfs:label "hasVehicleStop"@IRI-based; 
+                rdfs:label "stop"@en; 
+                rdfs:label "Haltepunkt"@de; 
+                rdfs:domain :PlannedStop;
+                rdfs:range <http://dbpedia.org/ontology/Station> . 
+#  --------------------------- Property 12------------------------- 
+:plannedToEnd rdf:type owl:ObjectProperty ;
+              rdfs:label "plannedToEnd"@IRI-based; 
+              rdfs:label "planned End"@en; 
+              rdfs:label "geplant bis"@de; 
+              rdfs:domain :ConstructionSite;
+              rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 13------------------------- 
+:hasDS100Code rdf:type owl:DatatypeProperty ;
+              rdfs:label "hasDS100Code"@IRI-based; 
+              rdfs:label "DS100Code"@en; 
+              rdfs:label "DS100Code"@de; 
+              rdfs:domain :DBTrainStation;
+              rdfs:range rdfs:Literal . 
+#  --------------------------- Property 14------------------------- 
+:impliesChanges rdf:type owl:ObjectProperty ;
+                rdfs:label "implies Changes"@IRI-based; 
+                rdfs:label "Changes"@en; 
+                rdfs:label "Änderungen"@de; 
+                rdfs:domain :ConstructionSite;
+                rdfs:range :TemporaryChanges . 
+#  --------------------------- Property 15------------------------- 
+<http://schema.org/openingHoursSpecification> rdf:type owl:ObjectProperty ;
+                                              rdfs:label "openingHoursSpecification"@IRI-based; 
+                                              rdfs:label "opening Hours"@en; 
+                                              rdfs:label "öffnungszeiten"@de; 
+                                              rdfs:domain <http://schema.org/CivicStructure>;
+                                              rdfs:range <http://schema.org/OpeningHoursSpecification> . 
+#  --------------------------- Property 16------------------------- 
+:WaggonNumber rdf:type owl:DatatypeProperty ;
+              rdfs:label "WaggonNumber"@IRI-based; 
+              rdfs:label "Waggon Number"@en; 
+              rdfs:label "Wagen Nummer"@de; 
+              rdfs:domain :Waggon;
+              rdfs:range rdfs:Literal . 
+#  --------------------------- Property 17------------------------- 
+:hasWaggonLength rdf:type owl:DatatypeProperty ;
+                 rdfs:label "hasWaggonLength"@IRI-based; 
+                 rdfs:label "Waggon Length"@en; 
+                 rdfs:label "Wagenlänge"@de; 
+                 rdfs:domain :Waggon;
+                 rdfs:range rdfs:Literal . 
+#  --------------------------- Property 18------------------------- 
+:isConnectedTo rdf:type owl:ObjectProperty ;
+               rdfs:label "isConnectedTo"@IRI-based; 
+               rdfs:label "Connected To"@en; 
+               rdfs:label "Verbunden Mit"@de; 
+               rdfs:domain :Waggon . 
+#  --------------------------- Property 19------------------------- 
+:isAutomat rdf:type owl:DatatypeProperty ;
+           rdfs:label "isAutomat"@IRI-based; 
+           rdfs:label "Automat"@en; 
+           rdfs:label "Automat"@de; 
+           rdfs:domain :DBInformationPoint;
+           rdfs:range xsd:boolean . 
+#  --------------------------- Property 20------------------------- 
+:isWorkingOn rdf:type owl:ObjectProperty ;
+             rdfs:label "isWorkingOn"@IRI-based; 
+             rdfs:label "Working On"@en; 
+             rdfs:label "Arbeite auf"@de; 
+             rdfs:domain :ConstructionSite;
+             rdfs:range <http://schema.org/CivicStructure> . 
+#  --------------------------- Property 21------------------------- 
+:TrainType rdf:type owl:DatatypeProperty ;
+           rdfs:label "TrainType"@IRI-based; 
+           rdfs:label "TrainType"@en; 
+           rdfs:label "Zugtyp"@de; 
+           rdfs:domain :Vehicle;
+           rdfs:range rdfs:Literal . 
+#  --------------------------- Property 22------------------------- 
+:hasWaggonType rdf:type owl:DatatypeProperty ;
+               rdfs:label "hasWaggonType"@IRI-based; 
+               rdfs:label "WaggonType"@en; 
+               rdfs:label "Wagentyp"@de; 
+               rdfs:domain :Waggon;
+               rdfs:range rdfs:Literal . 
+#  --------------------------- Property 23------------------------- 
+<https://schema.org/hasMap> rdf:type owl:ObjectProperty ;
+                            rdfs:label "hasMap"@IRI-based; 
+                            rdfs:label "has Map"@en; 
+                            rdfs:label "Karte"@de; 
+                            rdfs:domain <http://schema.org/Place>;
+                            rdfs:range <https://schema.org/Map> . 
+#  --------------------------- Property 24------------------------- 
+:hasWifiHotspot rdf:type owl:DatatypeProperty ;
+                rdfs:label "hasWifiHotspot"@IRI-based; 
+                rdfs:label "Wifi Hotspot"@en; 
+                rdfs:label "Wifi Hotspot"@de; 
+                rdfs:domain <http://schema.org/Place>;
+                rdfs:range xsd:boolean . 
+#  --------------------------- Property 25------------------------- 
+:hasHeight rdf:type owl:DatatypeProperty ;
+           rdfs:label "hasHeight"@IRI-based; 
+           rdfs:label "Height"@en; 
+           rdfs:label "Höhe"@de; 
+           rdfs:domain :Lift;
+           rdfs:range xsd:double . 
+#  --------------------------- Property 26------------------------- 
+:hasPlatformName rdf:type owl:DatatypeProperty ;
+                 rdfs:label "hasPlatformName"@IRI-based; 
+                 rdfs:label "Platform Name"@en; 
+                 rdfs:label "Gleis Name"@de; 
+                 rdfs:domain :Platform;
+                 rdfs:range xsd:string . 
+#  --------------------------- Property 27------------------------- 
+:Description rdf:type owl:DatatypeProperty ;
+             rdfs:label "Description"@IRI-based; 
+             rdfs:label "Description"@en; 
+             rdfs:label "Beschreibung"@de; 
+             rdfs:domain :ConstructionSite;
+             rdfs:range rdfs:Literal . 
+#  --------------------------- Property 28------------------------- 
+:hasWidth rdf:type owl:DatatypeProperty ;
+          rdfs:label "hasWidth"@IRI-based; 
+          rdfs:label "Width"@en; 
+          rdfs:label "Breite"@de; 
+          rdfs:domain :Lift;
+          rdfs:range xsd:double . 
+#  --------------------------- Property 29------------------------- 
+:hasImpactOn rdf:type owl:ObjectProperty ;
+             rdfs:label "hasImpactOn"@IRI-based; 
+             rdfs:label "Impact On"@en; 
+             rdfs:label "Einfluss auf"@de; 
+             rdfs:domain :TemporaryChanges . 
+#  --------------------------- Property 30------------------------- 
+:VehicleType rdf:type owl:ObjectProperty ;
+             rdfs:label "VehicleType"@IRI-based; 
+             rdfs:label "VehicleType"@en; 
+             rdfs:label "Fahrzeug Typ"@de; 
+             rdfs:domain :Vehicle;
+             rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 31------------------------- 
+:plannedStoppingPoint rdf:type owl:ObjectProperty ;
+                      rdfs:label "plannedStoppingPoint"@IRI-based; 
+                      rdfs:label "planned Stopping Point"@en; 
+                      rdfs:label "geplanter Halt"@de; 
+                      rdfs:domain :Waggon;
+                      rdfs:range :StoppingArea . 
+#  --------------------------- Property 32------------------------- 
+:isPartOf rdf:type owl:ObjectProperty ;
+          rdfs:label "isPartOf"@IRI-based; 
+          rdfs:label "Part of"@en; 
+          rdfs:label "Teil von"@de; 
+          rdfs:domain :StoppingArea;
+          rdfs:range :WalkingArea . 
+#  --------------------------- Property 33------------------------- 
+<https://schema.org/geo> rdf:type owl:ObjectProperty ;
+                         rdfs:label "geo"@IRI-based; 
+                         rdfs:label "geo"@en; 
+                         rdfs:label "geo"@de; 
+                         rdfs:domain <http://schema.org/Place>;
+                         rdfs:range <https://schema.org/GeoCoordinates> . 
+#  --------------------------- Property 34------------------------- 
+:hasSecurityMeasures rdf:type owl:ObjectProperty ;
+                     rdfs:label "hasSecurityMeasures"@IRI-based; 
+                     rdfs:label "Security Measures"@en; 
+                     rdfs:label "Sicherheitsmaßnahmen"@de; 
+                     rdfs:domain :RailwayCrossing . 
+#  --------------------------- Property 35------------------------- 
+<http://dbpedia.org/ontology/otherServingLines> rdf:type owl:ObjectProperty ;
+                                                rdfs:label "otherServingLines"@IRI-based; 
+                                                rdfs:label "serving Lines"@en; 
+                                                rdfs:label "bediente Linien"@de; 
+                                                rdfs:domain <http://dbpedia.org/ontology/Station>;
+                                                rdfs:range :Lines . 
+#  --------------------------- Property 36------------------------- 
+:hasExit rdf:type owl:ObjectProperty ;
+         rdfs:label "hasExit"@IRI-based; 
+         rdfs:label "hasExit"@iri-based; 
+         rdfs:label "Exit"@en; 
+         rdfs:label "Ausgang"@de; 
+         rdfs:domain :Lift;
+         rdfs:range :WalkingArea . 
+#  --------------------------- Property 37------------------------- 
+:hasPlannedStop rdf:type owl:ObjectProperty ;
+                rdfs:label "hasPlannedStop"@IRI-based; 
+                rdfs:label "has Planned Stop"@en; 
+                rdfs:label "geplanter Halt"@de; 
+                rdfs:domain :Vehicle;
+                rdfs:range :PlannedStop . 
+#  --------------------------- Property 38------------------------- 
+:hasArrivalTime rdf:type owl:DatatypeProperty ;
+                rdfs:label "hasArrivalTime"@IRI-based; 
+                rdfs:label "Arrival Time"@en; 
+                rdfs:label "Ankunftszeit"@de; 
+                rdfs:domain :PlannedStop;
+                rdfs:range rdfs:Literal . 
+#  --------------------------- Property 39------------------------- 
+<https://schema.org/containedInPlace> rdf:type owl:ObjectProperty ;
+                                      rdfs:label "containedInPlace"@IRI-based; 
+                                      rdfs:label "in"@en; 
+                                      rdfs:label "in"@de; 
+                                      rdfs:domain <http://schema.org/Place>;
+                                      rdfs:range <http://schema.org/Place> . 
+#  --------------------------- Property 40------------------------- 
+<http://dbpedia.org/ontology/servingRailwayLine> rdf:type owl:ObjectProperty ;
+                                                 rdfs:label "servingRailwayLine"@IRI-based; 
+                                                 rdfs:label "Railway Line"@en; 
+                                                 rdfs:label "Bahn Linie"@de; 
+                                                 rdfs:domain <http://dbpedia.org/ontology/Station>;
+                                                 rdfs:range :Lines . 
+#  --------------------------- Property 41------------------------- 
+:hasPlatform rdf:type owl:ObjectProperty ;
+             rdfs:label "hasPlatform"@IRI-based; 
+             rdfs:label "Platform"@en; 
+             rdfs:label "Steig"@de; 
+             rdfs:domain :PlannedStop;
+             rdfs:range :Platform . 
+#  --------------------------- Property 42------------------------- 
+:plannedDepartureTime rdf:type owl:DatatypeProperty ;
+                      rdfs:label "plannedDepartureTime"@IRI-based; 
+                      rdfs:label "planned Departure Time"@en; 
+                      rdfs:label "geplante Abfahrszeit"@de; 
+                      rdfs:domain :PlannedStop;
+                      rdfs:range rdfs:Literal . 
+#  --------------------------- Property 43------------------------- 
+:isAccessibleBy rdf:type owl:ObjectProperty ;
+                rdfs:label "isAccessibleBy"@IRI-based; 
+                rdfs:label "isAccessibleBy"@iri-based; 
+                rdfs:label "accessible by"@en; 
+                rdfs:label "erreichbar über"@de; 
+                rdfs:domain <http://schema.org/CivicStructure>;
+                rdfs:range :Entrance . 
+#  --------------------------- Property 44------------------------- 
+:hasDepth rdf:type owl:DatatypeProperty ;
+          rdfs:label "hasDepth"@IRI-based; 
+          rdfs:label "Depth"@en; 
+          rdfs:label "Tiefe"@de; 
+          rdfs:domain :Lift;
+          rdfs:range xsd:double . 
+#  --------------------------- Property 45------------------------- 
+:hasDepartureTime rdf:type owl:DatatypeProperty ;
+                  rdfs:label "hasDepartureTime"@IRI-based; 
+                  rdfs:label "Departure Time"@en; 
+                  rdfs:label "Abfahrts Zeit"@de; 
+                  rdfs:domain :PlannedStop;
+                  rdfs:range rdfs:Literal . 
+#  --------------------------- Property 46------------------------- 
+:isWaggon rdf:type owl:DatatypeProperty ;
+          rdfs:label "isWaggon"@IRI-based; 
+          rdfs:label "Waggon"@en; 
+          rdfs:label "Waggon"@de; 
+          rdfs:domain :Waggon;
+          rdfs:range rdfs:Literal . 
+#  --------------------------- Property 47------------------------- 
+:hasNumber rdf:type owl:DatatypeProperty ;
+           rdfs:label "hasNumber"@IRI-based; 
+           rdfs:label "Number"@en; 
+           rdfs:label "Nummer"@de; 
+           rdfs:domain :Vehicle;
+           rdfs:range rdfs:Literal . 
+#  --------------------------- Property 48------------------------- 
+:hasHandicappedSpecifications rdf:type owl:ObjectProperty ;
+                              rdfs:label "hasHandicappedSpecifications"@en; 
+                              rdfs:domain <http://schema.org/Place>;
+                              rdfs:range :HandicappedSpecifications . 
+#  --------------------------- Property 49------------------------- 
+:isWheelchairAccessible rdf:type owl:DatatypeProperty ;
+                        rdfs:label "isWheelChairFriendly"@en; 
+                        rdfs:domain :HandicappedSpecifications;
+                        rdfs:range xsd:boolean . 
+#  --------------------------- Property 50------------------------- 
+:isVisuallyI rdf:type owl:DatatypeProperty ;
+             rdfs:label "isBlindFriendly"@en; 
+             rdfs:domain :HandicappedSpecifications;
+             rdfs:range xsd:boolean . 
+#  --------------------------- Property 51------------------------- 
+:additionalInformation rdf:type owl:DatatypeProperty ;
+                       rdfs:label "hasAdditionalInformation"@en; 
+                       rdfs:domain :HandicappedSpecifications;
+                       rdfs:range xsd:string . 
+#  --------------------------- Property 52------------------------- 
+:hasAssistanceCenter rdf:type owl:ObjectProperty ;
+                     rdfs:label "hasAssistanceCenter"@en; 
+                     rdfs:domain :HandicappedSpecifications;
+                     rdfs:range <http://schema.org/CivicStructure> . 
+###  Class Definitions (Number of Classes) 29 ###
+#  --------------------------- Class  0------------------------- 
+<http://dbpedia.org/ontology/Station> rdf:type owl:Class; 
+                                      rdfs:subClassOf <http://schema.org/CivicStructure> ;
+                                      rdfs:label "Station"@IRI-based; 
+                                      rdfs:label "Station"@en; 
+                                      rdfs:label "Station"@de . 
+#  --------------------------- Class  1------------------------- 
+:StoppingArea rdf:type owl:Class; 
+              rdfs:subClassOf <http://schema.org/CivicStructure> ;
+              rdfs:label "StoppingArea"@IRI-based; 
+              rdfs:label "Stopping Point"@en; 
+              rdfs:label "Haltebereich"@de . 
+#  --------------------------- Class  2------------------------- 
+:Entrance rdf:type owl:Class; 
+          rdfs:label "Entrance"@IRI-based; 
+          rdfs:label "Entrance"@iri-based; 
+          rdfs:label "Entrance"@en; 
+          rdfs:label "Eingang"@de . 
+#  --------------------------- Class  3------------------------- 
+<https://schema.org/GeoCoordinates> rdf:type owl:Class; 
+                                    rdfs:label "GeoCoordinates"@IRI-based; 
+                                    rdfs:label "Geo Coordinates"@en; 
+                                    rdfs:label "Geo Koordinaten"@de . 
+#  --------------------------- Class  4------------------------- 
+:PlannedStop rdf:type owl:Class; 
+             rdfs:label "PlannedStop"@IRI-based; 
+             rdfs:label "Planned Stop"@en; 
+             rdfs:label "geplanter Halt"@de . 
+#  --------------------------- Class  5------------------------- 
+:TrainPlatform rdf:type owl:Class; 
+               rdfs:subClassOf :Platform ;
+               rdfs:label "TrainPlatform"@IRI-based; 
+               rdfs:label "Train Platform"@en; 
+               rdfs:label "Bahnsteig"@de . 
+#  --------------------------- Class  6------------------------- 
+:TaxiRank rdf:type owl:Class; 
+          rdfs:subClassOf <http://schema.org/CivicStructure> ;
+          rdfs:label "TaxiRank"@IRI-based; 
+          rdfs:label "TaxiRank"@iri-based; 
+          rdfs:label "Taxi Rank"@en; 
+          rdfs:label "Taxistand"@de . 
+#  --------------------------- Class  7------------------------- 
+:DBInformationPoint rdf:type owl:Class; 
+                    rdfs:subClassOf <http://schema.org/CivicStructure> ;
+                    rdfs:label "DBInformationPoint"@IRI-based; 
+                    rdfs:label "DB Information Point"@en; 
+                    rdfs:label "DB Reiseauskunft"@de . 
+#  --------------------------- Class  8------------------------- 
+<http://schema.org/CivicStructure> rdf:type owl:Class; 
+                                   rdfs:subClassOf <http://schema.org/Place> ;
+                                   rdfs:label "CivicStructure"@IRI-based; 
+                                   rdfs:label "Civic Structure"@en; 
+                                   rdfs:label "öffentliches Gut"@de . 
+#  --------------------------- Class  9------------------------- 
+:ConstructionSite rdf:type owl:Class; 
+                  rdfs:subClassOf <http://schema.org/CivicStructure> ;
+                  rdfs:label "ConstructionSite"@IRI-based; 
+                  rdfs:label "ConstructionSite"@en; 
+                  rdfs:label "Baustelle"@de . 
+#  --------------------------- Class  10------------------------- 
+<http://schema.org/Place> rdf:type owl:Class; 
+                          rdfs:label "Place"@IRI-based; 
+                          rdfs:label "Place"@en; 
+                          rdfs:label "Platz"@de . 
+#  --------------------------- Class  11------------------------- 
+:Vehicle rdf:type owl:Class; 
+         rdfs:label "Vehicle"@IRI-based; 
+         rdfs:label "Vehicle"@en; 
+         rdfs:label "Fahrzeug"@de . 
+#  --------------------------- Class  12------------------------- 
+:Stairs rdf:type owl:Class; 
+        rdfs:label "Stairs"@IRI-based; 
+        rdfs:label "Stairs"@en; 
+        rdfs:label "Treppe"@de . 
+#  --------------------------- Class  13------------------------- 
+:RailwayCrossing rdf:type owl:Class; 
+                 rdfs:subClassOf <http://schema.org/CivicStructure> ;
+                 rdfs:label "RailwayCrossing"@IRI-based; 
+                 rdfs:label "Railway Crossing"@en; 
+                 rdfs:label "Bahnübergang"@de . 
+#  --------------------------- Class  14------------------------- 
+rdfs:Datatype rdf:type owl:Class; 
+              rdfs:label "Datatype"@IRI-based . 
+#  --------------------------- Class  15------------------------- 
+<https://schema.org/Map> rdf:type owl:Class; 
+                         rdfs:label "Map"@IRI-based; 
+                         rdfs:label "Map"@en; 
+                         rdfs:label "Karte"@de . 
+#  --------------------------- Class  16------------------------- 
+:BusPlatform rdf:type owl:Class; 
+             rdfs:subClassOf :Platform ;
+             rdfs:label "BusPlatform"@IRI-based; 
+             rdfs:label "BusPlatform"@iri-based; 
+             rdfs:label "Bus Platform"@en; 
+             rdfs:label "Bussteig"@de . 
+#  --------------------------- Class  17------------------------- 
+:Waggon rdf:type owl:Class; 
+        rdfs:label "Waggon"@en . 
+#  --------------------------- Class  18------------------------- 
+:TemporaryChanges rdf:type owl:Class; 
+                  rdfs:label "TemporaryChanges"@IRI-based; 
+                  rdfs:label "temporary changes"@en; 
+                  rdfs:label "temporäre Änderungen"@de . 
+#  --------------------------- Class  19------------------------- 
+<http://schema.mobivoc.org/#ParkingSpace> rdf:type owl:Class; 
+                                          rdfs:subClassOf <http://schema.org/CivicStructure> ;
+                                          rdfs:label "ParkingSpace"@IRI-based; 
+                                          rdfs:label "Parking"@en; 
+                                          rdfs:label "Parkplatz"@de . 
+#  --------------------------- Class  20------------------------- 
+:HandicappedParkingSpace rdf:type owl:Class; 
+                         rdfs:subClassOf <http://schema.mobivoc.org/#ParkingSpace> ;
+                         rdfs:label "HandicappedParkingSpace"@IRI-based; 
+                         rdfs:label "Handicapped Parking"@en; 
+                         rdfs:label "Behinderten Parkplatz"@de . 
+#  --------------------------- Class  21------------------------- 
+<http://schema.org/OpeningHoursSpecification> rdf:type owl:Class; 
+                                              rdfs:label "OpeningHoursSpecification"@IRI-based; 
+                                              rdfs:label "Opening Hours"@en; 
+                                              rdfs:label "Öffnungszeiten"@de . 
+#  --------------------------- Class  22------------------------- 
+:TrafficLight rdf:type owl:Class; 
+              rdfs:subClassOf <http://schema.org/CivicStructure> ;
+              rdfs:label "TrafficLight"@IRI-based; 
+              rdfs:label "TrafficLight"@iri-based; 
+              rdfs:label "Traffic Light"@en; 
+              rdfs:label "Ampel"@de . 
+#  --------------------------- Class  23------------------------- 
+:Platform rdf:type owl:Class; 
+          rdfs:subClassOf :WalkingArea ;
+          rdfs:label "Platform"@IRI-based; 
+          rdfs:label "Platform"@en; 
+          rdfs:label "Gleis"@de . 
+#  --------------------------- Class  24------------------------- 
+:Lift rdf:type owl:Class; 
+      rdfs:label "Lift"@IRI-based; 
+      rdfs:label "Lift"@iri-based; 
+      rdfs:label "Lift"@en; 
+      rdfs:label "Aufzug"@de . 
+#  --------------------------- Class  25------------------------- 
+:DBTrainStation rdf:type owl:Class; 
+                rdfs:subClassOf <http://dbpedia.org/ontology/Station> ;
+                rdfs:label "DBTrainStation"@IRI-based; 
+                rdfs:label "DB Trainstation"@en; 
+                rdfs:label "DB Bahnhof"@de . 
+#  --------------------------- Class  26------------------------- 
+:Lines rdf:type owl:Class; 
+       rdfs:label "Lines"@IRI-based; 
+       rdfs:label "Lines"@iri-based; 
+       rdfs:label "Lines"@en; 
+       rdfs:label "Linien"@de . 
+#  --------------------------- Class  27------------------------- 
+:WalkingArea rdf:type owl:Class; 
+             rdfs:subClassOf <http://schema.org/CivicStructure> ;
+             rdfs:label "WalkingArea"@IRI-based; 
+             rdfs:label "WalkingArea"@iri-based; 
+             rdfs:label "Walking Area"@en; 
+             rdfs:label "Fußgängerbereich"@de . 
+#  --------------------------- Class  28------------------------- 
+:HandicappedSpecifications rdf:type owl:Class; 
+                           rdfs:label "HandicappedProperties"@en . 
