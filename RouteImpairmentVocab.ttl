@@ -1,0 +1,173 @@
+#################################################################
+###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
+#################################################################
+
+@prefix : 		<http://limbo-project.org/type/ .
+@prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns# .
+@prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema# .
+@prefix owl: 		<http://www.w3.org/2002/07/owl# .
+@prefix xsd: 		<http://www.w3.org/2001/XMLSchema# .
+@prefix dc: 		<http://purl.org/dc/elements/1.1/ .
+@prefix xml: 		<http://www.w3.org/XML/1998/namespace .
+@prefix wot: 		<http://xmlns.com/wot/0.1/ .
+@prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns# .
+@prefix foaf: 		<http://xmlns.com/foaf/0.1/ .
+@prefix sdo:    <https://schema.org/ . 
+@prefix : 		<http://limbo-project.org/type/ .
+@base 			<http://limbo-project.org/type/ .
+
+<http://limbo-project.org/type/ rdf:type owl:Ontology ;
+                                 dc:title "ImpairmentVoc"@en; 
+                                 dc:description "New ontology description"@en; 
+                                 owl:versionInfo "0.0.1"@en;
+                                 dc:creator "Dennis Kubitza" . 
+#################################################################
+
+###  Property Definitions (Number of Property) 19 ###
+#  --------------------------- Property 0------------------------- 
+:uuid rdf:type owl:DatatypeProperty ;
+      rdfs:label "uuid"@en; 
+      rdfs:label "uuid"@en; 
+      rdfs:domain sdo:Place;
+      rdfs:range rdfs:Literal . 
+#  --------------------------- Property 1------------------------- 
+:hasStateAgency rdf:type owl:ObjectProperty ;
+                rdfs:label "hasStateAgency"@IRI-based; 
+                rdfs:label "has State Agency"@en; 
+                rdfs:label "hat Träger"den; 
+                rdfs:domain :HeavyVehicleRoute;
+                rdfs:range sdo:Organization . 
+#  --------------------------- Property 2------------------------- 
+sdo:polygon rdf:type owl:DatatypeProperty ;
+                             rdfs:label "polygon"@en; 
+                             rdfs:label "Polygon"@en; 
+                             rdfs:domain sdo:Geoshape;
+                             rdfs:range rdfs:Literal . 
+#  --------------------------- Property 3------------------------- 
+:hasObstacle rdf:type owl:ObjectProperty ;
+             rdfs:label "has Obstacle"@en; 
+             rdfs:label "Hindernis"@de; 
+             rdfs:domain :HeavyVehicleRoute;
+             rdfs:range :HeavyVehicleRouteObstacle . 
+#  --------------------------- Property 4------------------------- 
+:type rdf:type owl:DatatypeProperty ;
+      rdfs:label "type"@en; 
+      rdfs:label "Type"@de; 
+      rdfs:domain :HeavyVehicleRouteObstacle;
+      rdfs:range xsd:string . 
+#  --------------------------- Property 5------------------------- 
+:hasDesignation rdf:type owl:DatatypeProperty ;
+                rdfs:label "designation"@en; 
+                rdfs:label "Beschreibung"@de; 
+                rdfs:domain :HeavyVehicleRouteObstacle;
+                rdfs:range rdfs:Literal . 
+#  --------------------------- Property 6------------------------- 
+:hasBuildingNumber rdf:type owl:DatatypeProperty ;
+                   rdfs:label "building number"@en; 
+                   rdfs:label "Gebäude Nummer"@en; 
+                   rdfs:domain :HeavyVehicleRouteObstacle;
+                   rdfs:range rdfs:Literal . 
+#  --------------------------- Property 7------------------------- 
+sdo:latitude rdf:type owl:DatatypeProperty ;
+                              rdfs:label "latitude"@en; 
+                              rdfs:label "Breitengrad"@de; 
+                              rdfs:domain sdo:GeoCoordinates;
+                              rdfs:range rdfs:Literal . 
+#  --------------------------- Property 8------------------------- 
+sdo:longitude rdf:type owl:DatatypeProperty ;
+                               rdfs:label "longitude"@en; 
+                               rdfs:label "Längengrad"@en; 
+                               rdfs:domain sdo:GeoCoordinates;
+                               rdfs:range rdfs:Literal . 
+#  --------------------------- Property 9------------------------- 
+sdo:geo rdf:type owl:ObjectProperty ;
+                         rdfs:label "geo"@en; 
+                         rdfs:label "geo"@de; 
+                         rdfs:domain sdo:Place;
+                         rdfs:range [ a owl:Class ;
+                            owl:unionOf  ( sdo:GeoCoordinates sdo:Geoshape )
+                          ]  . 
+#  --------------------------- Property 10------------------------- 
+:start rdf:type owl:DatatypeProperty ;
+       rdfs:label "startingTime"@en; 
+       rdfs:label "Startzeit"@de; 
+       rdfs:domain :TemporaryObstacle;
+       rdfs:range xsd:dateTime . 
+#  --------------------------- Property 11------------------------- 
+:end rdf:type owl:DatatypeProperty ;
+     rdfs:label "endingTime"@en; 
+     rdfs:label "Endzeit"@de; 
+     rdfs:domain :TemporaryObstacle;
+     rdfs:range xsd:dateTime . 
+#  --------------------------- Property 12------------------------- 
+:reason rdf:type owl:DatatypeProperty ;
+        rdfs:label "reason"@en; 
+        rdfs:label "Grund"@de; 
+        rdfs:domain :TemporaryObstacle;
+        rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 13------------------------- 
+:Position rdf:type owl:DatatypeProperty ;
+          rdfs:label "position"@en; 
+          rdfs:label "Position"@de; 
+          rdfs:domain :TemporaryObstacle;
+          rdfs:range rdfs:Datatype . 
+#  --------------------------- Property 14------------------------- 
+sdo:address rdf:type owl:DatatypeProperty ;
+                             rdfs:label "address"@en; 
+                             rdfs:label "Adresse"@de; 
+                             rdfs:domain sdo:Place;
+                             rdfs:range xsd:string . 
+#  --------------------------- Property 15------------------------- 
+sdo:containsPlace rdf:type owl:ObjectProperty ;
+                                   rdfs:label "contains Place"@en; 
+                                   rdfs:label "enthält"@de; 
+                                   rdfs:domain sdo:Place;
+                                   rdfs:range sdo:Place . 
+#  --------------------------- Property 16------------------------- 
+sdo:name rdf:type owl:DatatypeProperty ;
+                          rdfs:label "name"@en;
+                          rdfs:label "Name"@de;  
+                          rdfs:domain sdo:Place;
+                          rdfs:range xsd:string . 
+#  --------------------------- Property 17------------------------- 
+sdo:branchCode rdf:type owl:DatatypeProperty ;
+                                rdfs:label "branchCode"@en; 
+                                rdfs:label "Identifikationscode"@de;  
+                                rdfs:domain sdo:Place;
+                                rdfs:range xsd:string . 
+#  --------------------------- Property 18------------------------- 
+:impactRoadWith rdf:type owl:DatatypeProperty ;
+                rdfs:label "impactRoadWidth"@en; 
+                rdfs:label "verbleibende Breite"@de;  
+                rdfs:domain :TemporaryObstacle;
+                rdfs:range xsd:double . 
+###  Class Definitions (Number of Classes) 7 ###
+#  --------------------------- Class  0------------------------- 
+sdo:Organization rdf:type owl:Class; 
+                                  rdfs:label "Organization"@en . 
+#  --------------------------- Class  1------------------------- 
+:HeavyVehicleRoute rdf:type owl:Class; 
+                   rdfs:subClassOf sdo:Place ;
+                   rdfs:label "HeavyVehicleRoute"@IRI-based; 
+                   rdfs:label "Heavy Vehicle Route"@en ; 
+                   rdfs:label "Schwerlasttransportroute"@de.  
+#  --------------------------- Class  2------------------------- 
+sdo:Geoshape rdf:type owl:Class; 
+                              rdfs:label "Geoshape"@en . 
+#  --------------------------- Class  3------------------------- 
+sdo:Place rdf:type owl:Class; 
+                           rdfs:label "Place"@en ; 
+                           rdfs:label "Ort"@de.  
+#  --------------------------- Class  4------------------------- 
+:HeavyVehicleRouteObstacle rdf:type owl:Class; 
+                           rdfs:subClassOf sdo:Place ;
+                           rdfs:label "Schwerlasttransportroutenhinternis"@de;  
+                           rdfs:label "HeavyVehicleRouteObstacle"@en . 
+#  --------------------------- Class  5------------------------- 
+sdo:GeoCoordinates rdf:type owl:Class; 
+                                    rdfs:label "Geokoordinaten"@de;  
+                                    rdfs:label "GeoCoordinates"@en . 
+#  --------------------------- Class  6------------------------- 
+:TemporaryObstacle rdf:type owl:Class; 
+                   rdfs:subClassOf :HeavyVehicleRouteObstacle ;
+                   rdfs:label "TemporaryObstacle"@en . 
