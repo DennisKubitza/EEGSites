@@ -16,7 +16,7 @@
 @base 			<http://portal.limbo-project.org/vocab/RouteImpairmentVocab/> .
 
 <http://portal.limbo-project.org/vocab/RouteImpairmentVocab/> rdf:type owl:Ontology ;
-                                 dc:title "ImpairmentVoc"@en; 
+                                 dc:title "RouteImpairmentVocab"@en;
                                  dc:description "New ontology description"@en; 
                                  owl:versionInfo "0.0.1"@en;
                                  dc:creator "Dennis Kubitza" . 

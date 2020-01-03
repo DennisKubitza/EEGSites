@@ -12,7 +12,7 @@
 @prefix wot: 		<http://xmlns.com/wot/0.1/> .
 @prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
-@base 			<http://portal.limbo-project.org/vocab/IndoorNavigationVocab/ .
+@base 			<http://portal.limbo-project.org/vocab/IndoorNavigationVocab/> .
 
 http://portal.limbo-project.org/vocab/IndoorNavigationVocab/> rdf:type owl:Ontology ;
                                                   dc:title "AppPlantNavigation"@en; 
