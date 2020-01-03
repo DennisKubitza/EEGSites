@@ -12,9 +12,9 @@
 @prefix wot: 		<http://xmlns.com/wot/0.1/> .
 @prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
-@base 			<http://limbo-project.org/type/> .
+@base 			<http://portal.limbo-project.org/vocab/RenewableEnergyVocab/> .
 
-<http://limbo-project.org/type/> rdf:type owl:Ontology ;
+<http://portal.limbo-project.org/vocab/RenewableEnergyVocab/> rdf:type owl:Ontology ;
                                  dc:title "EEGFacilities"@en;
                                  dc:description "New ontology description"@en; 
                                  owl:versionInfo "0.0.1"@en;

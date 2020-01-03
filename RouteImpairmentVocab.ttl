@@ -13,10 +13,9 @@
 @prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
 @prefix sdo:    <https://schema.org/> . 
+@base 			<http://portal.limbo-project.org/vocab/RouteImpairmentVocab/> .
 
-@base 			<http://limbo-project.org/type/> .
-
-<http://limbo-project.org/type/ rdf:type owl:Ontology ;
+<http://portal.limbo-project.org/vocab/RouteImpairmentVocab/> rdf:type owl:Ontology ;
                                  dc:title "ImpairmentVoc"@en; 
                                  dc:description "New ontology description"@en; 
                                  owl:versionInfo "0.0.1"@en;
