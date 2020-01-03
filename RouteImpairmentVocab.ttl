@@ -33,7 +33,7 @@
 :hasStateAgency rdf:type owl:ObjectProperty ;
                 rdfs:label "hasStateAgency"@IRI-based; 
                 rdfs:label "has State Agency"@en; 
-                rdfs:label "hat Taeger"@de; 
+                rdfs:label "hat Traeger"@de; 
                 rdfs:domain :HeavyVehicleRoute;
                 rdfs:range sdo:Organization . 
 #  --------------------------- Property 2------------------------- 
