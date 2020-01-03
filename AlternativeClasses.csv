@@ -1,0 +1,16 @@
+Old Class,  Comment,  Proposed New Class,  Comment;
+sdo:GasStation,, keine bessere Alternative gefunden;
+sdo:PostalAddress,, keine bessere Alternative gefunden;
+http://linkedgeodata.org/ontology/RailwayThing, Betriebsstellen DB, https://portal.limbo-project.org/vocab/IndoorNavigationVocab/DBTrainStation, ;
+http://linkedgeodata.org/ontology/Taxi, Taxistand, https://portal.limbo-project.org/vocab/IndoorNavigationVocab/TaxiRank, ;
+http://linkedgeodata.org/ontology/BicycleParking, Bycicle Parking, http://schema.mobivoc.org/#BicycleParkingStation, ;
+http://linkedgeodata.org/ontology/CarSharing, CarSharing Stationen, http://schema.mobivoc.org/#ParkingFacility, ;
+http://linkedgeodata.org/ontology/TrafficSignals, Ampelanlage, https://portal.limbo-project.org/vocab/IndoorNavigationVocab/TrafficLight, ;
+http://linkedgeodata.org/ontology/RailwayPlatform, Bahnsteig, https://portal.limbo-project.org/vocab/IndoorNavigationVocab/Platform, ;
+http://linkedgeodata.org/ontology/RailwayStation, Bahnhof, http://dbpedia.org/ontology/Station, ;
+mv:Charger, Elektrotankstellen,http://schema.mobivoc.org/#ParkingSpace, keine bessere Alternative gefunden;
+http://linkedgeodata.org/ontology/HighwayThing, Straße, ;
+http://linkedgeodata.org/ontology/Elevator, Aufzug, https://portal.limbo-project.org/vocab/IndoorNavigationVocab/Lift, ;
+http://limbo-project.org/type/Escalator, Fahrtreppe, https://portal.limbo-project.org/vocab/IndoorNavigationVocab/Escalator, ;
+http://limbo-project.org/type/EEGSite, EEG-Anlagen (CISS), https://portal.limbo-project.org/vocab/RenewableEnergyVocab/EEGSite, ;
+
