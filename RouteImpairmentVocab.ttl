@@ -26,14 +26,14 @@
 #  --------------------------- Property 0------------------------- 
 :uuid rdf:type owl:DatatypeProperty ;
       rdfs:label "uuid"@en; 
-      rdfs:label "uuid"@en; 
+      rdfs:label "uuid@de; 
       rdfs:domain sdo:Place;
       rdfs:range rdfs:Literal . 
 #  --------------------------- Property 1------------------------- 
 :hasStateAgency rdf:type owl:ObjectProperty ;
                 rdfs:label "hasStateAgency"@IRI-based; 
                 rdfs:label "has State Agency"@en; 
-                rdfs:label "hat Träger"de; 
+                rdfs:label "hat Taeger"@de; 
                 rdfs:domain :HeavyVehicleRoute;
                 rdfs:range sdo:Organization . 
 #  --------------------------- Property 2------------------------- 
