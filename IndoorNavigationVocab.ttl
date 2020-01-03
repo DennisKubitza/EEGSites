@@ -2,7 +2,7 @@
 ###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
 #################################################################
 
-@prefix : 		<http://portal.limbo-project.org/vocab/IndoorNavigationVocab/> .
+@prefix : 		<https://portal.limbo-project.org/vocab/IndoorNavigationVocab/> .
 @prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: 		<http://www.w3.org/2002/07/owl#> .
@@ -12,9 +12,9 @@
 @prefix wot: 		<http://xmlns.com/wot/0.1/> .
 @prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
-@base 			<http://portal.limbo-project.org/vocab/IndoorNavigationVocab/> .
+@base 			<https://portal.limbo-project.org/vocab/IndoorNavigationVocab/> .
 
-<http://portal.limbo-project.org/vocab/IndoorNavigationVocab/> rdf:type owl:Ontology ;
+<https://portal.limbo-project.org/vocab/IndoorNavigationVocab/> rdf:type owl:Ontology ;
                                                   dc:title "AppPlantNavigation"@en; 
                                                   dc:description "Modelling Navigation Information for handicapped people within public buildings and for public transport"@en . 
 #################################################################

@@ -2,7 +2,7 @@
 ###  Generated with the experimental alpha version of the TTL exporter of WebVOWL (version 1.1.7)  http://visualdataweb.de/webvowl/   ###
 #################################################################
 
-@prefix : 		<http://portal.limbo-project.org/vocab/RouteImpairmentVocab/> .
+@prefix : 		<https://portal.limbo-project.org/vocab/RouteImpairmentVocab/> .
 @prefix rdf: 		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: 		<http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: 		<http://www.w3.org/2002/07/owl#> .
@@ -13,9 +13,9 @@
 @prefix vs: 		<http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix foaf: 		<http://xmlns.com/foaf/0.1/> .
 @prefix sdo:    <https://schema.org/> . 
-@base 			<http://portal.limbo-project.org/vocab/RouteImpairmentVocab/> .
+@base 			<https://portal.limbo-project.org/vocab/RouteImpairmentVocab/> .
 
-<http://portal.limbo-project.org/vocab/RouteImpairmentVocab/> rdf:type owl:Ontology ;
+<https://portal.limbo-project.org/vocab/RouteImpairmentVocab/> rdf:type owl:Ontology ;
                                  dc:title "RouteImpairmentVocab"@en;
                                  dc:description "New ontology description"@en; 
                                  owl:versionInfo "0.0.1"@en;
@@ -26,7 +26,7 @@
 #  --------------------------- Property 0------------------------- 
 :uuid rdf:type owl:DatatypeProperty ;
       rdfs:label "uuid"@en; 
-      rdfs:label "uuid@de; 
+      rdfs:label "uuid"@de; 
       rdfs:domain sdo:Place;
       rdfs:range rdfs:Literal . 
 #  --------------------------- Property 1------------------------- 
@@ -39,7 +39,7 @@
 #  --------------------------- Property 2------------------------- 
 sdo:polygon rdf:type owl:DatatypeProperty ;
                              rdfs:label "polygon"@en; 
-                             rdfs:label "Polygon"@en; 
+                             rdfs:label "Polygon"@de; 
                              rdfs:domain sdo:Geoshape;
                              rdfs:range rdfs:Literal . 
 #  --------------------------- Property 3------------------------- 
